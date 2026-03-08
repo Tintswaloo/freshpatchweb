@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Supplier Dashboard - Fresh Patch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+header {
+  background-color: #388e3c;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main.supplier-dashboard {
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form input,
+form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+form button {
+  background-color: #6ec072;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #5aa45f;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  margin-top: 2rem;
+}
+</style>
+<body>
+  <header>
+    <h1>Welcome, Supplier!</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="supplier.html">Dashboard</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <main class="supplier-dashboard">
+    <!-- Supplier Info -->
+    <section class="profile-section">
+      <h2>Your Profile</h2>
+      <p><strong>Farm Name:</strong> Green Valley Organics</p>
+      <p><strong>Location:</strong> Stellenbobosch, Western Cape</p>
+      <p><strong>Email:</strong> supplier@example.com</p>
+    </section>
+
+    <!-- Add Product -->
+    <section class="add-product">
+      <h2>Add a New Product</h2>
+      <form>
+        <label>Product Name:</label>
+        <input type="text" required>
+
+        <label>Category:</label>
+        <select required>
+          <option>Vegetables</option>
+          <option>Fruits</option>
+          <option>Dairy</option>
+        </select>
+
+        <label>Price (R):</label>
+        <input type="number" required>
+
+        <label>Quantity:</label>
+        <input type="text" required>
+
+        <label>Upload Image:</label>
+        <input type="file">
+
+        <button type="submit">Add Product</button>
+      </form>
+    </section>
+
+    <!-- Product List -->
+    <section class="product-list">
+      <h2>Your Products</h2>
+      <ul>
+        <li>🥬 Spinach Bunch - R30 (In stock: 50)</li>
+        <li>🍎 Apples 1.5kg - R45 (In stock: 25)</li>
+        <li>🥚 Large Eggs (6) - R35 (In stock: 40)</li>
+      </ul>
+    </section>
+
+    <!-- Orders -->
+    <section class="orders">
+      <h2>New Orders</h2>
+      <ul>
+        <li>Order #1024 - 2x Spinach Bunch - 27 May 2025</li>
+        <li>Order #1025 - 1x Apples 1.5kg - 28 May 2025</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fresh Patch. All rights reserved.</p>
+  </footer>
+</body>
+</html>

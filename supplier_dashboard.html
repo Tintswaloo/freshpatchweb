@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Supplier Dashboard - Fresh Patch</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f8fdf4;
+    }
+
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    .dashboard-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #2e7d32;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 16px;
+      margin: 10px 5px 20px 0;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    .product-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .product-table th, .product-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .product-table th {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fresh Patch Supplier Dashboard</h1>
+  </header>
+
+  <div class="dashboard-container">
+    <h2>Welcome, [Supplier Name]</h2>
+
+    <a href="addproduct.html" class="btn">➕ Add New Product</a>
+    <a href="supplier_login.html" class="btn" style="background-color: #f44336;">Logout</a>
+
+    <h3>Your Product Listings</h3>
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Category</th>
+          <th>Price (R)</th>
+          <th>Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fresh Spinach</td>
+          <td>Vegetables</td>
+          <td>15.00</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Organic Apples</td>
+          <td>Fruits</td>
+          <td>25.00</td>
+          <td>30</td>
+        </tr>
+        <!-- More products can go here -->
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

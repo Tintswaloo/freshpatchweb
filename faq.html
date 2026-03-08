@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ - Fresh Patch</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+    header {
+      background-color: #6ec072;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+    header .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    header img {
+      height: 50px;
+    }
+    header h1 {
+      font-size: 20px;
+      color: white;
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .faq-section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f9fff9;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .faq-section h2 {
+      color: #228127;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .faq {
+      margin-bottom: 20px;
+    }
+
+    .faq h3 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .faq p {
+      margin: 0;
+      padding-left: 15px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <h3>📦 How long does delivery take?</h3>
+      <p>We deliver within 1–2 days in Gauteng. For other areas, 2–4 working days.</p>
+    </div>
+
+    <div class="faq">
+      <h3>💳 What payment options are available?</h3>
+      <p>We currently support EFT, cash on delivery, and mobile payments (SnapScan).</p>
+    </div>
+
+    <div class="faq">
+      <h3>🔁 Do you offer refunds or exchanges?</h3>
+      <p>Yes, refunds or replacements are offered within 48 hours for perishable goods.</p>
+    </div>
+
+    <div class="faq">
+      <h3>🌿 Where do your products come from?</h3>
+      <p>We work directly with trusted local farms in South Africa.</p>
+    </div>
+
+    <div class="faq">
+      <h3>🧺 Can I customize my Fresh Box?</h3>
+      <p>Not right now, but we’re working on letting you swap items in the future :)</p>
+    </div>
+  </section>
+<div id="footer-placeholder"></div>
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+
+</body>
+</html>

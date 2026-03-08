@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fresh Patch - Veggies</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+    header {
+      background-color: #6ec072;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+    header .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    header img {
+      height: 80px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .full-width-banner {
+      width: 100%;
+      display: block;
+      margin-bottom: 30px;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .product-list-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+.product-card p, .product-card h3 {
+  font-size: 0.9rem;
+}
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fefefe;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .product-card img {
+    width: 180px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    }
+      #carrot-box, .peppers-box {
+  height: 200px;
+  width: 180px;
+  overflow: hidden;
+}
+    .product-info {
+      flex: 1;
+    }
+
+    .product-info h2 {
+      margin: 4px 0;
+      font-size: 15px;
+      color: #2b572d;
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: bold;
+      color: #228127;
+      margin-bottom: 8px;
+    }
+
+    .product-info ul {
+      list-style-type: disc;
+      font-size: 14px;
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+
+    .add-to-cart {
+      padding: 10px 20px;
+      background-color: #6ec072;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .add-to-cart:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #6ec072;
+      color: white;
+    }
+
+    footer img {
+      height: 60px;
+    }
+    #carrot-box, .peppers-box {
+  height: 200px;
+  width: 180px;
+  overflow: hidden;
+}
+  </style>
+</head>
+<body>
+  <?php include 'header.php'; ?>
+<img src="images/fruit banner.png" alt="Veggies Banner" class="full-width-banner">
+
+<section class="product-list-section">
+  <!-- Category Dropdown -->
+<label for="product-category" style="font-weight: bold; font-size: 16px;">Browse Products:</label>
+<select id="product-category" onchange="handleCategoryChange()" style="margin-left: 10px; padding: 5px;">
+  <option value="">-- Select a Category --</option>
+  <option value="veggies">Veggies</option>
+  <option value="fruits">Fruits</option>
+  <option value="juices">Juices</option>
+  <option value="dairy">Dairy</option>
+  <option value="marketplace">Marketplace</option>
+</select>
+<script>
+  function handleCategoryChange() {
+    const category = document.getElementById("product-category").value;
+    if (category) {
+      // redirect or load content dynamically
+      window.location.href = category + ".html";
+    }
+  }
+</script>
+  <h1 style="text-align: center; margin-bottom: 40px;">FRESH VEGETABLES</h1>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="images/spinach.png" alt="Spinach">
+      <div class="product-info">
+        <h2>Fresh Spinach</h2>
+        <div class="price">R25</div>
+
+        <ul>
+          <li>Organic</li>
+          <li>Locally grown</li>
+        </ul>
+
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+      <div class="product-card">
+      <img src="images/cabbage.jpg" alt= "Cabbage Head">
+      <div class="product-info">
+        <h2>Cabbage Head</h2>
+        <div class="price">R25</div>
+
+        <ul>
+          <li>Organic</li>
+          <li>Locally grown</li>
+        </ul>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      </div>
+      <div class="product-card">
+      <img src="images/bspinach.jpg" alt= "Baby Spinach">
+      <div class="product-info">
+        <h2>Baby Spinach Bunch</h2>
+        <div class="price">R25</div>
+
+        <ul>
+          <li>Organic</li>
+          <li>Locally grown</li>
+        </ul>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      </div>
+    <div class="product-card">
+      <img src="images/carrots.jpg" alt="Carrots">
+      <div class="product-info">
+        <h2>Crunchy Carrots</h2>
+        <div class="price">R20</div>
+
+        <ul>
+          <li>Washed & ready to eat</li>
+        </ul>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/brocoli.jpg" alt="Broccoli">
+      <div class="product-info">
+        <h2>Green Broccoli</h2>
+        <div class="price">R28</div>
+
+        <ul>
+        <li>Rich in vitamins</li>
+      </ul>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="images/cauliflower.jpg" alt="Cauliflower">
+      <div class="product-info">
+        <h2>Cauliflower Bunch</h2>
+        <div class="price">R20</div>
+
+        <ul>
+          <li>Washed & ready to eat</li>
+        </ul>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="images/cucumber.jpg" alt="Cucumber">
+      <div class="product-info">
+        <h2>Cool Cucumbers</h2>
+        <div class="price">R15</div>
+
+        <ul>
+          <li>Farm fresh</li>
+          <li>Hydrating</li>
+        </ul>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+</div>
+<div class="product-card">
+      <img src="images/lettuce.jpg" alt="Lettuce">
+      <div class="product-info">
+        <h2>Crisp Lettuce Head</h2>
+        <div class="price">R15</div>
+
+        <ul>
+          <li>Farm fresh</li>
+          <li>Hydrating</li>
+        </ul>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+</div>
+
+<div class="product-card">
+      <img src="images/babymarrow.jpg" alt="Baby Marrow">
+      <div class="product-info">
+        <h2>Baby Marrow</h2>
+        <div class="price">R15</div>
+
+        <ul>
+          <li>Farm fresh</li>
+          <li>Hydrating</li>
+        </ul>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+</div>
+    <div class="product-card">
+      <img src="images/rbpeppers.jpg" alt="Robot Peppers">
+      <div class="product-info">
+        <h2>Robot Pepper 3 Pack</h2>
+        <div class="price">R25</div>
+
+        <ul>
+          <li>Organic</li>
+          <li>Locally grown</li>
+        </ul>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+       <div class="product-card">
+      <img src="images/brinjals.jpg" alt="Brinjals">
+      <div class="product-info">
+        <h2>Brinjal Punnets 3Pack</h2>
+        <div class="price">R25</div>
+
+        <ul>
+          <li>Organic</li>
+          <li>Locally grown</li>
+        </ul>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+       </div>
+       <div class="product-card">
+      <img src="images/mealies.jpg" alt="Sweetcorn">
+      <div class="product-info">
+        <h2>Sweetcorn</h2>
+        <div class="price">R25</div>
+
+        <ul>
+          <li>Organic</li>
+          <li>Locally grown</li>
+        </ul>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+       </div>
+</section>
+  <div id="footer-placeholder">
+  </div>
+
+<script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+      .catch(err => console.error("Footer load error:", err));
+
+       function toggleDropdown() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>
